@@ -1,4 +1,4 @@
-# Basic Automations by UiPath ![](uipath-230.png)
+# Basic Automations by UiPath ![](uipath-230.png=30%x)
 
 
 ## Content Projects INFO 
