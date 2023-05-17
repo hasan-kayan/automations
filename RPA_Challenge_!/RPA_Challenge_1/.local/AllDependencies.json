@@ -21266,9 +21266,9 @@
     "restore": {
       "projectUniqueName": "RPA_Challenge_1",
       "projectName": "RPA_Challenge_1",
-      "projectPath": "C:\\Users\\hasan\\Desktop\\UI PATH\\automations\\RPA_Challenge_!\\RPA_Challenge_1\\.local",
+      "projectPath": "C:\\Users\\hasan\\Desktop\\automations\\RPA_Challenge_!\\RPA_Challenge_1\\.local",
       "packagesPath": "C:\\Users\\hasan\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\hasan\\Desktop\\UI PATH\\automations\\RPA_Challenge_!\\RPA_Challenge_1\\.local",
+      "outputPath": "C:\\Users\\hasan\\Desktop\\automations\\RPA_Challenge_!\\RPA_Challenge_1\\.local",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ]
