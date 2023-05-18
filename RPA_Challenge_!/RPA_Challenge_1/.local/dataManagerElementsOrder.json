@@ -11,7 +11,18 @@
     {
       "Path": "Main.xaml",
       "SortBy": 0,
-      "VariablesSectionElementsOrder": [],
+      "VariablesSectionElementsOrder": [
+        "Index&Sequence_1",
+        "ChallengeExcel&Sequence_1",
+        "Number&Sequence_3",
+        "Mail&Sequence_3",
+        "Address&Sequence_3",
+        "Role&Sequence_3",
+        "CompanyName&Sequence_3",
+        "LastName&Sequence_3",
+        "Name&Sequence_3",
+        "indexPhoneNumber&Sequence_4"
+      ],
       "ArgumentsSectionElementsOrder": [],
       "ConstantsSectionElementsOrder": [],
       "AddedNamespaces": null
