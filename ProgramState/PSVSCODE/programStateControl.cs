@@ -12,7 +12,7 @@ class Program
 
         if (isRunning)
         {
-            Console.WriteLine($"{processName} çalışıyor.");
+            Console.WriteLine($"{processName} program works");
 
             Process[] processes = Process.GetProcessesByName(processName);
             bool isNotResponding = !processes[0].Responding;
@@ -29,25 +29,25 @@ class Program
 
             if (isNotResponding)
             {
-                Console.WriteLine($"{processName} yanıt vermiyor.");
+                Console.WriteLine($"{processName} not responding.");
             }
             else
             {
-                Console.WriteLine($"{processName} yanıt veriyor.");
+                Console.WriteLine($"{processName} responding.");
             }
 
             if (isSuspended)
             {
-                Console.WriteLine($"{processName} askıya alınmış durumda.");
+                Console.WriteLine($"{processName} suspended.");
             }
             else
             {
-                Console.WriteLine($"{processName} askıda değil.");
+                Console.WriteLine($"{processName} not suspended.");
             }
         }
         else
         {
-            Console.WriteLine($"{processName} çalışmıyor.");
+            Console.WriteLine($"{processName} not working.");
         }
     }
 
