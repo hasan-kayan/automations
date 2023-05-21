@@ -6,7 +6,8 @@ class Program
 {
     static void Main(string[] args)
     {
-        string processName = "notepad";
+        Console.Write("Please enter the process name you would like to check : ");
+        string processName = Console.ReadLine();
         bool isRunning = IsProcessRunning(processName);
 
         if (isRunning)
