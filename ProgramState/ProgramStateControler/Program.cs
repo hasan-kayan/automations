@@ -1,6 +1,6 @@
 using System;
 using System.Diagnostics;
-using System.Threading;
+using System.Linq;
 
 class Program
 {
@@ -8,50 +8,25 @@ class Program
     {
         Console.Write("Please enter the process name you would like to check: ");
         string processName = Console.ReadLine();
-        bool isRunning = IsProcessRunning(processName);
 
-        if (isRunning)
+        Process[] processes = Process.GetProcessesByName(processName);
+
+        if (processes.Length > 0)
         {
+            Process targetProcess = processes.First();
+
             Console.WriteLine($"{processName} program is running.");
 
-            Process[] processes = Process.GetProcessesByName(processName);
-            bool isNotResponding = !processes[0].Responding;
-            bool isSuspended = false;
-            bool isWaiting = false;
-
-            foreach (ProcessThread thread in processes[0].Threads)
-            {
-                if (thread.ThreadState == ThreadState.WaitSleepJoin)
-                {
-                    isWaiting = true;
-                }
-
-                if (thread.ThreadState == ThreadState.Suspended)
-                {
-                    isSuspended = true;
-                    break;
-                }
-            }
-
-            if (isNotResponding)
+            if (!targetProcess.Responding)
             {
                 Console.WriteLine($"{processName} is not responding.");
             }
             else
             {
                 Console.WriteLine($"{processName} is responding.");
-            }   
-
-            if (isSuspended)
-            {
-                Console.WriteLine($"{processName} is suspended.");
-            }
-            else
-            {
-                Console.WriteLine($"{processName} is not suspended.");
             }
 
-            if (isWaiting)
+            if (targetProcess.Threads.Cast<System.Diagnostics.ProcessThread>().Any(thread => thread.ThreadState == System.Diagnostics.ThreadState.Wait || thread.ThreadState == System.Diagnostics.ThreadState.WaitSleepJoin))
             {
                 Console.WriteLine($"{processName} is in a waiting state.");
             }
@@ -59,19 +34,19 @@ class Program
             {
                 Console.WriteLine($"{processName} is not in a waiting state.");
             }
+
+            if (targetProcess.Threads.Cast<System.Diagnostics.ProcessThread>().Any(thread => thread.ThreadState == System.Diagnostics.ThreadState.Suspended))
+            {
+                Console.WriteLine($"{processName} is suspended.");
+            }
+            else
+            {
+                Console.WriteLine($"{processName} is not suspended.");
+            }
         }
         else
         {
             Console.WriteLine($"{processName} is not running.");
         }
     }
-
-    static bool IsProcessRunning(string processName)
-    {
-        Process[] processes = Process.GetProcessesByName(processName);
-        return processes.Length > 0;
-    }
 }
-
-
-
