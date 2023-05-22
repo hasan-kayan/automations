@@ -8,22 +8,17 @@ class Program
     {
         Console.Write("Please enter the process name you would like to check: ");
         string processName = Console.ReadLine();
-        bool isRunning = IsProcessRunning(processName);
+
+        Process[] processes = Process.GetProcessesByName(processName);
+        bool isRunning = processes.Length > 0;
 
         if (isRunning)
         {
             Console.WriteLine($"{processName} program is running.");
 
-            Process[] processes = Process.GetProcessesByName(processName);
             bool isNotResponding = !processes[0].Responding;
-            bool isSuspended = false;
-            
-           if( processes[0].Threads[0].WaitReason == ThreadWaitReason.Suspended)  // is waiting kaldır
-            {
-                isSuspended = true;
-            }
+            bool isSuspended = processes[0].Threads[0].WaitReason == ThreadWaitReason.Suspended;
 
-           
             if (isNotResponding)
             {
                 Console.WriteLine($"{processName} is not responding.");
@@ -41,21 +36,10 @@ class Program
             {
                 Console.WriteLine($"{processName} is not suspended.");
             }
-
-            
         }
         else
         {
             Console.WriteLine($"{processName} is not running.");
         }
     }
-
-    static bool IsProcessRunning(string processName) // Maine taşı 
-    {
-        Process[] processes = Process.GetProcessesByName(processName);
-        return processes.Length > 0;
-    }
 }
-
-
-
