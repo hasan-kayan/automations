@@ -17,27 +17,13 @@ class Program
             Process[] processes = Process.GetProcessesByName(processName);
             bool isNotResponding = !processes[0].Responding;
             bool isSuspended = false;
-            bool isWaiting = false;
-
-           if( processes[0].Threads[0].ThreadState = System.Threading.ThreadState.Suspended)
+            
+           if( processes[0].Threads[0].WaitReason == ThreadWaitReason.Suspended)  // is waiting kaldır
             {
                 isSuspended = true;
             }
 
-            foreach (ProcessThread thread in processes[0].Threads)
-            {
-                if (thread.ThreadState == System.Threading.ThreadState.WaitSleepJoin)
-                {
-                    isWaiting = true;
-                }
-
-                if (thread.ThreadState == System.Threading.ThreadState.Suspended)
-                {
-                    isSuspended = true;
-                    break;
-                }
-            }
-
+           
             if (isNotResponding)
             {
                 Console.WriteLine($"{processName} is not responding.");
@@ -56,14 +42,7 @@ class Program
                 Console.WriteLine($"{processName} is not suspended.");
             }
 
-            if (isWaiting)
-            {
-                Console.WriteLine($"{processName} is in a waiting state.");
-            }
-            else
-            {
-                Console.WriteLine($"{processName} is not in a waiting state.");
-            }
+            
         }
         else
         {
@@ -71,7 +50,7 @@ class Program
         }
     }
 
-    static bool IsProcessRunning(string processName)
+    static bool IsProcessRunning(string processName) // Maine taşı 
     {
         Process[] processes = Process.GetProcessesByName(processName);
         return processes.Length > 0;

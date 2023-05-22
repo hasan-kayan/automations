@@ -3,3 +3,13 @@ C:\Users\hasan\Desktop\automations\ProgramState\PSVSCODE\obj\Debug\net7.0\PSVSCO
 C:\Users\hasan\Desktop\automations\ProgramState\PSVSCODE\obj\Debug\net7.0\PSVSCODE.AssemblyInfoInputs.cache
 C:\Users\hasan\Desktop\automations\ProgramState\PSVSCODE\obj\Debug\net7.0\PSVSCODE.AssemblyInfo.cs
 C:\Users\hasan\Desktop\automations\ProgramState\PSVSCODE\obj\Debug\net7.0\PSVSCODE.csproj.CoreCompileInputs.cache
+C:\Users\hasan\Desktop\automations\ProgramState\PSVSCODE\bin\Debug\net7.0\PSVSCODE.exe
+C:\Users\hasan\Desktop\automations\ProgramState\PSVSCODE\bin\Debug\net7.0\PSVSCODE.deps.json
+C:\Users\hasan\Desktop\automations\ProgramState\PSVSCODE\bin\Debug\net7.0\PSVSCODE.runtimeconfig.json
+C:\Users\hasan\Desktop\automations\ProgramState\PSVSCODE\bin\Debug\net7.0\PSVSCODE.dll
+C:\Users\hasan\Desktop\automations\ProgramState\PSVSCODE\bin\Debug\net7.0\PSVSCODE.pdb
+C:\Users\hasan\Desktop\automations\ProgramState\PSVSCODE\obj\Debug\net7.0\PSVSCODE.dll
+C:\Users\hasan\Desktop\automations\ProgramState\PSVSCODE\obj\Debug\net7.0\refint\PSVSCODE.dll
+C:\Users\hasan\Desktop\automations\ProgramState\PSVSCODE\obj\Debug\net7.0\PSVSCODE.pdb
+C:\Users\hasan\Desktop\automations\ProgramState\PSVSCODE\obj\Debug\net7.0\PSVSCODE.genruntimeconfig.cache
+C:\Users\hasan\Desktop\automations\ProgramState\PSVSCODE\obj\Debug\net7.0\ref\PSVSCODE.dll
