@@ -1,0 +1,8 @@
+C:\Users\hasan\Desktop\automations\ProgramState\ProgramStateControler\obj\Debug\net6.0\ProgramStateControler.csproj.AssemblyReference.cache
+C:\Users\hasan\Desktop\automations\ProgramState\ProgramStateControler\obj\Debug\net6.0\ProgramStateControler.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\hasan\Desktop\automations\ProgramState\ProgramStateControler\obj\Debug\net6.0\ProgramStateControler.AssemblyInfoInputs.cache
+C:\Users\hasan\Desktop\automations\ProgramState\ProgramStateControler\obj\Debug\net6.0\ProgramStateControler.AssemblyInfo.cs
+C:\Users\hasan\Desktop\automations\ProgramState\ProgramStateControler\obj\Debug\net6.0\ProgramStateControler.csproj.CoreCompileInputs.cache
+C:\Users\hasan\Desktop\automations\ProgramState\ProgramStateControler\obj\Debug\net6.0\ProgramStateControler.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\hasan\Desktop\automations\ProgramState\ProgramStateControler\obj\Debug\net6.0\ProgramStateControler.RazorAssemblyInfo.cache
+C:\Users\hasan\Desktop\automations\ProgramState\ProgramStateControler\obj\Debug\net6.0\ProgramStateControler.RazorAssemblyInfo.cs

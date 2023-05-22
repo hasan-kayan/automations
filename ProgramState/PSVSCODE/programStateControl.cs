@@ -6,21 +6,27 @@ class Program
 {
     static void Main(string[] args)
     {
-        Console.Write("Please enter the process name you would like to check : ");
+        Console.Write("Please enter the process name you would like to check: ");
         string processName = Console.ReadLine();
         bool isRunning = IsProcessRunning(processName);
 
         if (isRunning)
         {
-            Console.WriteLine($"{processName} program works");
+            Console.WriteLine($"{processName} program is running.");
 
             Process[] processes = Process.GetProcessesByName(processName);
             bool isNotResponding = !processes[0].Responding;
             bool isSuspended = false;
+            bool isWaiting = false;
 
             foreach (ProcessThread thread in processes[0].Threads)
             {
-                if (thread.ThreadState == ThreadState.Wait || thread.ThreadState == ThreadState.Suspended)
+                if (thread.ThreadState == ThreadState.WaitSleepJoin)
+                {
+                    isWaiting = true;
+                }
+
+                if (thread.ThreadState == ThreadState.Suspended)
                 {
                     isSuspended = true;
                     break;
@@ -29,25 +35,34 @@ class Program
 
             if (isNotResponding)
             {
-                Console.WriteLine($"{processName} not responding.");
+                Console.WriteLine($"{processName} is not responding.");
             }
             else
             {
-                Console.WriteLine($"{processName} responding.");
+                Console.WriteLine($"{processName} is responding.");
             }
 
             if (isSuspended)
             {
-                Console.WriteLine($"{processName} suspended.");
+                Console.WriteLine($"{processName} is suspended.");
             }
             else
             {
-                Console.WriteLine($"{processName} not suspended.");
+                Console.WriteLine($"{processName} is not suspended.");
+            }
+
+            if (isWaiting)
+            {
+                Console.WriteLine($"{processName} is in a waiting state.");
+            }
+            else
+            {
+                Console.WriteLine($"{processName} is not in a waiting state.");
             }
         }
         else
         {
-            Console.WriteLine($"{processName} not working.");
+            Console.WriteLine($"{processName} is not running.");
         }
     }
 
@@ -57,3 +72,6 @@ class Program
         return processes.Length > 0;
     }
 }
+
+
+
