@@ -1,8 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "tEb465VaAi0IQmuQ65MtesLCOdbHQ427ElIvFK/wHGkDwxQO/W2c9D9jVjEvlV5Z6nK5iYUz332xHeGgf9/cnA==",
+  "dgSpecHash": "KS/ziG+4mqdDNWPvy3B0HdGhyn1s0IproJlH2yXUVzW6uBr5wKsftyiSD3/v6IUvh7FBGbm015BOvoynuOiuvQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\hasan\\Desktop\\automations\\ProgramState\\ProgramStateControler\\ProgramStateControler.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\hasan\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\hasan\\.nuget\\packages\\microsoft.netcore.targets\\1.1.0\\microsoft.netcore.targets.1.1.0.nupkg.sha512",
+    "C:\\Users\\hasan\\.nuget\\packages\\system.runtime\\4.3.0\\system.runtime.4.3.0.nupkg.sha512",
+    "C:\\Users\\hasan\\.nuget\\packages\\system.threading\\4.3.0\\system.threading.4.3.0.nupkg.sha512",
+    "C:\\Users\\hasan\\.nuget\\packages\\system.threading.tasks\\4.3.0\\system.threading.tasks.4.3.0.nupkg.sha512"
+  ],
   "logs": []
 }

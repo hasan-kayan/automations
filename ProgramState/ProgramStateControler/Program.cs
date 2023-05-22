@@ -40,7 +40,7 @@ class Program
             else
             {
                 Console.WriteLine($"{processName} is responding.");
-            }
+            }   
 
             if (isSuspended)
             {
