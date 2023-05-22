@@ -1,0 +1,5 @@
+C:\Users\hasan\Desktop\automations\ProgramState\PSVSCODE\obj\Debug\net7.0\PSVSCODE.csproj.AssemblyReference.cache
+C:\Users\hasan\Desktop\automations\ProgramState\PSVSCODE\obj\Debug\net7.0\PSVSCODE.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\hasan\Desktop\automations\ProgramState\PSVSCODE\obj\Debug\net7.0\PSVSCODE.AssemblyInfoInputs.cache
+C:\Users\hasan\Desktop\automations\ProgramState\PSVSCODE\obj\Debug\net7.0\PSVSCODE.AssemblyInfo.cs
+C:\Users\hasan\Desktop\automations\ProgramState\PSVSCODE\obj\Debug\net7.0\PSVSCODE.csproj.CoreCompileInputs.cache

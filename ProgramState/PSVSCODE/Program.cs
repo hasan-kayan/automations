@@ -19,14 +19,19 @@ class Program
             bool isSuspended = false;
             bool isWaiting = false;
 
+           if( processes[0].Threads[0].ThreadState = System.Threading.ThreadState.Suspended)
+            {
+                isSuspended = true;
+            }
+
             foreach (ProcessThread thread in processes[0].Threads)
             {
-                if (thread.ThreadState == ThreadState.WaitSleepJoin)
+                if (thread.ThreadState == System.Threading.ThreadState.WaitSleepJoin)
                 {
                     isWaiting = true;
                 }
 
-                if (thread.ThreadState == ThreadState.Suspended)
+                if (thread.ThreadState == System.Threading.ThreadState.Suspended)
                 {
                     isSuspended = true;
                     break;
