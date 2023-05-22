@@ -1,21 +1,27 @@
-$process = Get-Process -Name "processName" -ErrorAction SilentlyContinue
+$processName = Read-Host -Prompt "Please enter the process name you would like to check"
+
+$process = Get-Process -Name $processName -ErrorAction SilentlyContinue
+
 if ($process) {
-    Write-Output "$($process.ProcessName) programı çalışıyor."
+    Write-Output "$processName program is running."
+
     if ($process.Responding) {
-        Write-Output "$($process.ProcessName) yanıt veriyor."
+        Write-Output "$processName is responding."
     } else {
-        Write-Output "$($process.ProcessName) yanıt vermiyor."
+        Write-Output "$processName is not responding."
     }
+
     if ($process.Threads | Where-Object { $_.WaitReason }) {
-        Write-Output "$($process.ProcessName) bekleme durumunda."
+        Write-Output "$processName is in a waiting state."
     } else {
-        Write-Output "$($process.ProcessName) bekleme durumunda değil."
+        Write-Output "$processName is not in a waiting state."
     }
+
     if ($process.Threads | Where-Object { $_.ThreadState -eq "Suspended" }) {
-        Write-Output "$($process.ProcessName) askıya alınmış durumda."
+        Write-Output "$processName is suspended."
     } else {
-        Write-Output "$($process.ProcessName) askıya alınmamış durumda."
+        Write-Output "$processName is not suspended."
     }
 } else {
-    Write-Output "$processName çalışmıyor."
+    Write-Output "$processName is not running."
 }
