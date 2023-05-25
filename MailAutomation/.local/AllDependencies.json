@@ -1311,6 +1311,34 @@
           }
         }
       },
+      "Microsoft.Web.WebView2/1.0.1462.37": {
+        "type": "package",
+        "compile": {
+          "lib/netcoreapp3.0/_._": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netcoreapp3.0/Microsoft.Web.WebView2.Core.dll": {
+            "related": ".xml"
+          },
+          "lib/netcoreapp3.0/Microsoft.Web.WebView2.WinForms.dll": {
+            "related": ".xml"
+          },
+          "lib/netcoreapp3.0/Microsoft.Web.WebView2.Wpf.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "build/_._": {}
+        },
+        "runtimeTargets": {
+          "runtimes/win-x64/native/_._": {
+            "assetType": "native",
+            "rid": "win-x64"
+          }
+        }
+      },
       "Microsoft.Win32.Primitives/4.3.0": {
         "type": "package",
         "dependencies": {
@@ -4385,6 +4413,99 @@
           }
         }
       },
+      "UiPath.Form.Activities/23.4.3": {
+        "type": "package",
+        "dependencies": {
+          "System.Activities.ViewModels": "1.0.0-20230306.1",
+          "UiPath.Platform": "23.4.1",
+          "UiPath.Studio.Forms.Runtime": "23.4.3",
+          "UiPath.Telemetry.Client": "1.5.3"
+        },
+        "compile": {
+          "lib/net6.0-windows7.0/_._": {}
+        },
+        "runtime": {
+          "lib/net6.0-windows7.0/UiPath.Forms.Activities.Design.dll": {},
+          "lib/net6.0-windows7.0/UiPath.Forms.Activities.dll": {}
+        },
+        "resource": {
+          "lib/net6.0-windows7.0/de/UiPath.Forms.Activities.Design.resources.dll": {
+            "locale": "de"
+          },
+          "lib/net6.0-windows7.0/de/UiPath.Forms.Activities.resources.dll": {
+            "locale": "de"
+          },
+          "lib/net6.0-windows7.0/es-MX/UiPath.Forms.Activities.Design.resources.dll": {
+            "locale": "es-MX"
+          },
+          "lib/net6.0-windows7.0/es-MX/UiPath.Forms.Activities.resources.dll": {
+            "locale": "es-MX"
+          },
+          "lib/net6.0-windows7.0/es/UiPath.Forms.Activities.Design.resources.dll": {
+            "locale": "es"
+          },
+          "lib/net6.0-windows7.0/es/UiPath.Forms.Activities.resources.dll": {
+            "locale": "es"
+          },
+          "lib/net6.0-windows7.0/fr/UiPath.Forms.Activities.Design.resources.dll": {
+            "locale": "fr"
+          },
+          "lib/net6.0-windows7.0/fr/UiPath.Forms.Activities.resources.dll": {
+            "locale": "fr"
+          },
+          "lib/net6.0-windows7.0/ja/UiPath.Forms.Activities.Design.resources.dll": {
+            "locale": "ja"
+          },
+          "lib/net6.0-windows7.0/ja/UiPath.Forms.Activities.resources.dll": {
+            "locale": "ja"
+          },
+          "lib/net6.0-windows7.0/ko/UiPath.Forms.Activities.Design.resources.dll": {
+            "locale": "ko"
+          },
+          "lib/net6.0-windows7.0/ko/UiPath.Forms.Activities.resources.dll": {
+            "locale": "ko"
+          },
+          "lib/net6.0-windows7.0/pt-BR/UiPath.Forms.Activities.Design.resources.dll": {
+            "locale": "pt-BR"
+          },
+          "lib/net6.0-windows7.0/pt-BR/UiPath.Forms.Activities.resources.dll": {
+            "locale": "pt-BR"
+          },
+          "lib/net6.0-windows7.0/pt/UiPath.Forms.Activities.Design.resources.dll": {
+            "locale": "pt"
+          },
+          "lib/net6.0-windows7.0/pt/UiPath.Forms.Activities.resources.dll": {
+            "locale": "pt"
+          },
+          "lib/net6.0-windows7.0/ru/UiPath.Forms.Activities.Design.resources.dll": {
+            "locale": "ru"
+          },
+          "lib/net6.0-windows7.0/tr/UiPath.Forms.Activities.Design.resources.dll": {
+            "locale": "tr"
+          },
+          "lib/net6.0-windows7.0/tr/UiPath.Forms.Activities.resources.dll": {
+            "locale": "tr"
+          },
+          "lib/net6.0-windows7.0/zh-CN/UiPath.Forms.Activities.Design.resources.dll": {
+            "locale": "zh-CN"
+          },
+          "lib/net6.0-windows7.0/zh-CN/UiPath.Forms.Activities.resources.dll": {
+            "locale": "zh-CN"
+          },
+          "lib/net6.0-windows7.0/zh-TW/UiPath.Forms.Activities.Design.resources.dll": {
+            "locale": "zh-TW"
+          },
+          "lib/net6.0-windows7.0/zh-TW/UiPath.Forms.Activities.resources.dll": {
+            "locale": "zh-TW"
+          },
+          "lib/net6.0-windows7.0/zu/UiPath.Forms.Activities.Design.resources.dll": {
+            "locale": "zu"
+          },
+          "lib/net6.0-windows7.0/zu/UiPath.Forms.Activities.resources.dll": {
+            "locale": "zu"
+          }
+        }
+      },
       "UiPath.ImageProcessing/23.4.0": {
         "type": "package",
         "compile": {
@@ -4721,6 +4842,71 @@
           },
           "lib/net6.0-windows7.0/zh-CN/UiPath.Platform.resources.dll": {
             "locale": "zh-CN"
+          }
+        }
+      },
+      "UiPath.Studio.Forms.Runtime/23.4.3": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Web.WebView2": "1.0.1462.37",
+          "System.IO.Abstractions": "3.0.10",
+          "UiPath.Platform": "23.4.1"
+        },
+        "compile": {
+          "lib/net6.0-windows7.0/_._": {}
+        },
+        "runtime": {
+          "lib/net6.0-windows7.0/UiPath.Studio.Forms.Runtime.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.WindowsDesktop.App.WindowsForms"
+        ],
+        "resource": {
+          "lib/net6.0-windows7.0/de/UiPath.Studio.Forms.Runtime.resources.dll": {
+            "locale": "de"
+          },
+          "lib/net6.0-windows7.0/es-MX/UiPath.Studio.Forms.Runtime.resources.dll": {
+            "locale": "es-MX"
+          },
+          "lib/net6.0-windows7.0/es/UiPath.Studio.Forms.Runtime.resources.dll": {
+            "locale": "es"
+          },
+          "lib/net6.0-windows7.0/fr/UiPath.Studio.Forms.Runtime.resources.dll": {
+            "locale": "fr"
+          },
+          "lib/net6.0-windows7.0/ja/UiPath.Studio.Forms.Runtime.resources.dll": {
+            "locale": "ja"
+          },
+          "lib/net6.0-windows7.0/ko/UiPath.Studio.Forms.Runtime.resources.dll": {
+            "locale": "ko"
+          },
+          "lib/net6.0-windows7.0/pt-BR/UiPath.Studio.Forms.Runtime.resources.dll": {
+            "locale": "pt-BR"
+          },
+          "lib/net6.0-windows7.0/pt/UiPath.Studio.Forms.Runtime.resources.dll": {
+            "locale": "pt"
+          },
+          "lib/net6.0-windows7.0/ru/UiPath.Studio.Forms.Runtime.resources.dll": {
+            "locale": "ru"
+          },
+          "lib/net6.0-windows7.0/tr/UiPath.Studio.Forms.Runtime.resources.dll": {
+            "locale": "tr"
+          },
+          "lib/net6.0-windows7.0/zh-CN/UiPath.Studio.Forms.Runtime.resources.dll": {
+            "locale": "zh-CN"
+          },
+          "lib/net6.0-windows7.0/zh-TW/UiPath.Studio.Forms.Runtime.resources.dll": {
+            "locale": "zh-TW"
+          },
+          "lib/net6.0-windows7.0/zu/UiPath.Studio.Forms.Runtime.resources.dll": {
+            "locale": "zu"
+          }
+        },
+        "contentFiles": {
+          "contentFiles/any/any/_._": {
+            "buildAction": "None",
+            "codeLanguage": "any",
+            "copyToOutput": false
           }
         }
       },
@@ -6602,6 +6788,31 @@
           "lib/netstandard2.0/Microsoft.VisualStudio.OLE.Interop.dll": {
             "related": ".xml"
           }
+        }
+      },
+      "Microsoft.Web.WebView2/1.0.1462.37": {
+        "type": "package",
+        "compile": {
+          "lib/netcoreapp3.0/_._": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netcoreapp3.0/Microsoft.Web.WebView2.Core.dll": {
+            "related": ".xml"
+          },
+          "lib/netcoreapp3.0/Microsoft.Web.WebView2.WinForms.dll": {
+            "related": ".xml"
+          },
+          "lib/netcoreapp3.0/Microsoft.Web.WebView2.Wpf.dll": {
+            "related": ".xml"
+          }
+        },
+        "native": {
+          "runtimes/win-x64/native/_._": {}
+        },
+        "build": {
+          "build/_._": {}
         }
       },
       "Microsoft.Win32.Primitives/4.3.0": {
@@ -9673,6 +9884,99 @@
           }
         }
       },
+      "UiPath.Form.Activities/23.4.3": {
+        "type": "package",
+        "dependencies": {
+          "System.Activities.ViewModels": "1.0.0-20230306.1",
+          "UiPath.Platform": "23.4.1",
+          "UiPath.Studio.Forms.Runtime": "23.4.3",
+          "UiPath.Telemetry.Client": "1.5.3"
+        },
+        "compile": {
+          "lib/net6.0-windows7.0/_._": {}
+        },
+        "runtime": {
+          "lib/net6.0-windows7.0/UiPath.Forms.Activities.Design.dll": {},
+          "lib/net6.0-windows7.0/UiPath.Forms.Activities.dll": {}
+        },
+        "resource": {
+          "lib/net6.0-windows7.0/de/UiPath.Forms.Activities.Design.resources.dll": {
+            "locale": "de"
+          },
+          "lib/net6.0-windows7.0/de/UiPath.Forms.Activities.resources.dll": {
+            "locale": "de"
+          },
+          "lib/net6.0-windows7.0/es-MX/UiPath.Forms.Activities.Design.resources.dll": {
+            "locale": "es-MX"
+          },
+          "lib/net6.0-windows7.0/es-MX/UiPath.Forms.Activities.resources.dll": {
+            "locale": "es-MX"
+          },
+          "lib/net6.0-windows7.0/es/UiPath.Forms.Activities.Design.resources.dll": {
+            "locale": "es"
+          },
+          "lib/net6.0-windows7.0/es/UiPath.Forms.Activities.resources.dll": {
+            "locale": "es"
+          },
+          "lib/net6.0-windows7.0/fr/UiPath.Forms.Activities.Design.resources.dll": {
+            "locale": "fr"
+          },
+          "lib/net6.0-windows7.0/fr/UiPath.Forms.Activities.resources.dll": {
+            "locale": "fr"
+          },
+          "lib/net6.0-windows7.0/ja/UiPath.Forms.Activities.Design.resources.dll": {
+            "locale": "ja"
+          },
+          "lib/net6.0-windows7.0/ja/UiPath.Forms.Activities.resources.dll": {
+            "locale": "ja"
+          },
+          "lib/net6.0-windows7.0/ko/UiPath.Forms.Activities.Design.resources.dll": {
+            "locale": "ko"
+          },
+          "lib/net6.0-windows7.0/ko/UiPath.Forms.Activities.resources.dll": {
+            "locale": "ko"
+          },
+          "lib/net6.0-windows7.0/pt-BR/UiPath.Forms.Activities.Design.resources.dll": {
+            "locale": "pt-BR"
+          },
+          "lib/net6.0-windows7.0/pt-BR/UiPath.Forms.Activities.resources.dll": {
+            "locale": "pt-BR"
+          },
+          "lib/net6.0-windows7.0/pt/UiPath.Forms.Activities.Design.resources.dll": {
+            "locale": "pt"
+          },
+          "lib/net6.0-windows7.0/pt/UiPath.Forms.Activities.resources.dll": {
+            "locale": "pt"
+          },
+          "lib/net6.0-windows7.0/ru/UiPath.Forms.Activities.Design.resources.dll": {
+            "locale": "ru"
+          },
+          "lib/net6.0-windows7.0/tr/UiPath.Forms.Activities.Design.resources.dll": {
+            "locale": "tr"
+          },
+          "lib/net6.0-windows7.0/tr/UiPath.Forms.Activities.resources.dll": {
+            "locale": "tr"
+          },
+          "lib/net6.0-windows7.0/zh-CN/UiPath.Forms.Activities.Design.resources.dll": {
+            "locale": "zh-CN"
+          },
+          "lib/net6.0-windows7.0/zh-CN/UiPath.Forms.Activities.resources.dll": {
+            "locale": "zh-CN"
+          },
+          "lib/net6.0-windows7.0/zh-TW/UiPath.Forms.Activities.Design.resources.dll": {
+            "locale": "zh-TW"
+          },
+          "lib/net6.0-windows7.0/zh-TW/UiPath.Forms.Activities.resources.dll": {
+            "locale": "zh-TW"
+          },
+          "lib/net6.0-windows7.0/zu/UiPath.Forms.Activities.Design.resources.dll": {
+            "locale": "zu"
+          },
+          "lib/net6.0-windows7.0/zu/UiPath.Forms.Activities.resources.dll": {
+            "locale": "zu"
+          }
+        }
+      },
       "UiPath.ImageProcessing/23.4.0": {
         "type": "package",
         "compile": {
@@ -10009,6 +10313,71 @@
           },
           "lib/net6.0-windows7.0/zh-CN/UiPath.Platform.resources.dll": {
             "locale": "zh-CN"
+          }
+        }
+      },
+      "UiPath.Studio.Forms.Runtime/23.4.3": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Web.WebView2": "1.0.1462.37",
+          "System.IO.Abstractions": "3.0.10",
+          "UiPath.Platform": "23.4.1"
+        },
+        "compile": {
+          "lib/net6.0-windows7.0/_._": {}
+        },
+        "runtime": {
+          "lib/net6.0-windows7.0/UiPath.Studio.Forms.Runtime.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.WindowsDesktop.App.WindowsForms"
+        ],
+        "resource": {
+          "lib/net6.0-windows7.0/de/UiPath.Studio.Forms.Runtime.resources.dll": {
+            "locale": "de"
+          },
+          "lib/net6.0-windows7.0/es-MX/UiPath.Studio.Forms.Runtime.resources.dll": {
+            "locale": "es-MX"
+          },
+          "lib/net6.0-windows7.0/es/UiPath.Studio.Forms.Runtime.resources.dll": {
+            "locale": "es"
+          },
+          "lib/net6.0-windows7.0/fr/UiPath.Studio.Forms.Runtime.resources.dll": {
+            "locale": "fr"
+          },
+          "lib/net6.0-windows7.0/ja/UiPath.Studio.Forms.Runtime.resources.dll": {
+            "locale": "ja"
+          },
+          "lib/net6.0-windows7.0/ko/UiPath.Studio.Forms.Runtime.resources.dll": {
+            "locale": "ko"
+          },
+          "lib/net6.0-windows7.0/pt-BR/UiPath.Studio.Forms.Runtime.resources.dll": {
+            "locale": "pt-BR"
+          },
+          "lib/net6.0-windows7.0/pt/UiPath.Studio.Forms.Runtime.resources.dll": {
+            "locale": "pt"
+          },
+          "lib/net6.0-windows7.0/ru/UiPath.Studio.Forms.Runtime.resources.dll": {
+            "locale": "ru"
+          },
+          "lib/net6.0-windows7.0/tr/UiPath.Studio.Forms.Runtime.resources.dll": {
+            "locale": "tr"
+          },
+          "lib/net6.0-windows7.0/zh-CN/UiPath.Studio.Forms.Runtime.resources.dll": {
+            "locale": "zh-CN"
+          },
+          "lib/net6.0-windows7.0/zh-TW/UiPath.Studio.Forms.Runtime.resources.dll": {
+            "locale": "zh-TW"
+          },
+          "lib/net6.0-windows7.0/zu/UiPath.Studio.Forms.Runtime.resources.dll": {
+            "locale": "zu"
+          }
+        },
+        "contentFiles": {
+          "contentFiles/any/any/_._": {
+            "buildAction": "None",
+            "codeLanguage": "any",
+            "copyToOutput": false
           }
         }
       },
@@ -12702,6 +13071,96 @@
         "lib/netstandard2.0/Microsoft.VisualStudio.OLE.Interop.xml",
         "microsoft.visualstudio.ole.interop.16.7.30328.74.nupkg.sha512",
         "microsoft.visualstudio.ole.interop.nuspec"
+      ]
+    },
+    "Microsoft.Web.WebView2/1.0.1462.37": {
+      "sha512": "q1B5OWQBJxX4tTcG1JiwUOOPDAfgDwWx9ckEQoo/o55MwE4zeTuFeFv0ghTFr28hxlBSiMQ/6OzRQswyx2D7WA==",
+      "type": "package",
+      "path": "microsoft.web.webview2/1.0.1462.37",
+      "hasTools": true,
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.txt",
+        "NOTICE.txt",
+        "WebView2.idl",
+        "WebView2.tlb",
+        "build/Common.targets",
+        "build/Microsoft.Web.WebView2.targets",
+        "build/WebView2Rules.Project.xml",
+        "build/native/Microsoft.Web.WebView2.targets",
+        "build/native/arm64/WebView2Loader.dll",
+        "build/native/arm64/WebView2Loader.dll.lib",
+        "build/native/arm64/WebView2LoaderStatic.lib",
+        "build/native/include-winrt/WebView2Interop.h",
+        "build/native/include-winrt/WebView2Interop.idl",
+        "build/native/include-winrt/WebView2Interop.tlb",
+        "build/native/include/WebView2.h",
+        "build/native/include/WebView2EnvironmentOptions.h",
+        "build/native/x64/WebView2Loader.dll",
+        "build/native/x64/WebView2Loader.dll.lib",
+        "build/native/x64/WebView2LoaderStatic.lib",
+        "build/native/x86/WebView2Loader.dll",
+        "build/native/x86/WebView2Loader.dll.lib",
+        "build/native/x86/WebView2LoaderStatic.lib",
+        "build/wv2winrt.targets",
+        "lib/Microsoft.Web.WebView2.Core.winmd",
+        "lib/net45/Microsoft.Web.WebView2.Core.dll",
+        "lib/net45/Microsoft.Web.WebView2.Core.xml",
+        "lib/net45/Microsoft.Web.WebView2.WinForms.dll",
+        "lib/net45/Microsoft.Web.WebView2.WinForms.xml",
+        "lib/net45/Microsoft.Web.WebView2.Wpf.dll",
+        "lib/net45/Microsoft.Web.WebView2.Wpf.xml",
+        "lib/netcoreapp3.0/Microsoft.Web.WebView2.Core.dll",
+        "lib/netcoreapp3.0/Microsoft.Web.WebView2.Core.xml",
+        "lib/netcoreapp3.0/Microsoft.Web.WebView2.WinForms.dll",
+        "lib/netcoreapp3.0/Microsoft.Web.WebView2.WinForms.xml",
+        "lib/netcoreapp3.0/Microsoft.Web.WebView2.Wpf.dll",
+        "lib/netcoreapp3.0/Microsoft.Web.WebView2.Wpf.xml",
+        "microsoft.web.webview2.1.0.1462.37.nupkg.sha512",
+        "microsoft.web.webview2.nuspec",
+        "runtimes/win-arm64/native/WebView2Loader.dll",
+        "runtimes/win-arm64/native_uap/Microsoft.Web.WebView2.Core.dll",
+        "runtimes/win-x64/native/WebView2Loader.dll",
+        "runtimes/win-x64/native_uap/Microsoft.Web.WebView2.Core.dll",
+        "runtimes/win-x86/native/WebView2Loader.dll",
+        "runtimes/win-x86/native_uap/Microsoft.Web.WebView2.Core.dll",
+        "tools/VisualStudioToolsManifest.xml",
+        "tools/wv2winrt/Antlr3.Runtime.dll",
+        "tools/wv2winrt/Antlr4.StringTemplate.dll",
+        "tools/wv2winrt/System.Buffers.dll",
+        "tools/wv2winrt/System.CommandLine.DragonFruit.dll",
+        "tools/wv2winrt/System.CommandLine.Rendering.dll",
+        "tools/wv2winrt/System.CommandLine.dll",
+        "tools/wv2winrt/System.Memory.dll",
+        "tools/wv2winrt/System.Numerics.Vectors.dll",
+        "tools/wv2winrt/System.Runtime.CompilerServices.Unsafe.dll",
+        "tools/wv2winrt/concrt140_app.dll",
+        "tools/wv2winrt/cs/System.CommandLine.resources.dll",
+        "tools/wv2winrt/de/System.CommandLine.resources.dll",
+        "tools/wv2winrt/es/System.CommandLine.resources.dll",
+        "tools/wv2winrt/fr/System.CommandLine.resources.dll",
+        "tools/wv2winrt/it/System.CommandLine.resources.dll",
+        "tools/wv2winrt/ja/System.CommandLine.resources.dll",
+        "tools/wv2winrt/ko/System.CommandLine.resources.dll",
+        "tools/wv2winrt/msvcp140_1_app.dll",
+        "tools/wv2winrt/msvcp140_2_app.dll",
+        "tools/wv2winrt/msvcp140_app.dll",
+        "tools/wv2winrt/pl/System.CommandLine.resources.dll",
+        "tools/wv2winrt/pt-BR/System.CommandLine.resources.dll",
+        "tools/wv2winrt/ru/System.CommandLine.resources.dll",
+        "tools/wv2winrt/tr/System.CommandLine.resources.dll",
+        "tools/wv2winrt/vcamp140_app.dll",
+        "tools/wv2winrt/vccorlib140_app.dll",
+        "tools/wv2winrt/vcomp140_app.dll",
+        "tools/wv2winrt/vcruntime140_app.dll",
+        "tools/wv2winrt/winrt_winmd.dll",
+        "tools/wv2winrt/winrt_winmd.winmd",
+        "tools/wv2winrt/wv2winrt.exe",
+        "tools/wv2winrt/wv2winrt.exe.config",
+        "tools/wv2winrt/wv2winrt.xml",
+        "tools/wv2winrt/zh-Hans/System.CommandLine.resources.dll",
+        "tools/wv2winrt/zh-Hant/System.CommandLine.resources.dll"
       ]
     },
     "Microsoft.Win32.Primitives/4.3.0": {
@@ -19663,6 +20122,44 @@
         "uipath.excel.activities.nuspec"
       ]
     },
+    "UiPath.Form.Activities/23.4.3": {
+      "sha512": "pbUB/gimra4+i39fM+NmL7bOyrlwoAlvVBpV4aShOXc43AB/7CWw1bAP1i6jpLG8VD1TfgoZTiLyYKxFoctevA==",
+      "type": "package",
+      "path": "uipath.form.activities/23.4.3",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net6.0-windows7.0/UiPath.Forms.Activities.Design.dll",
+        "lib/net6.0-windows7.0/UiPath.Forms.Activities.dll",
+        "lib/net6.0-windows7.0/de/UiPath.Forms.Activities.Design.resources.dll",
+        "lib/net6.0-windows7.0/de/UiPath.Forms.Activities.resources.dll",
+        "lib/net6.0-windows7.0/es-MX/UiPath.Forms.Activities.Design.resources.dll",
+        "lib/net6.0-windows7.0/es-MX/UiPath.Forms.Activities.resources.dll",
+        "lib/net6.0-windows7.0/es/UiPath.Forms.Activities.Design.resources.dll",
+        "lib/net6.0-windows7.0/es/UiPath.Forms.Activities.resources.dll",
+        "lib/net6.0-windows7.0/fr/UiPath.Forms.Activities.Design.resources.dll",
+        "lib/net6.0-windows7.0/fr/UiPath.Forms.Activities.resources.dll",
+        "lib/net6.0-windows7.0/ja/UiPath.Forms.Activities.Design.resources.dll",
+        "lib/net6.0-windows7.0/ja/UiPath.Forms.Activities.resources.dll",
+        "lib/net6.0-windows7.0/ko/UiPath.Forms.Activities.Design.resources.dll",
+        "lib/net6.0-windows7.0/ko/UiPath.Forms.Activities.resources.dll",
+        "lib/net6.0-windows7.0/pt-BR/UiPath.Forms.Activities.Design.resources.dll",
+        "lib/net6.0-windows7.0/pt-BR/UiPath.Forms.Activities.resources.dll",
+        "lib/net6.0-windows7.0/pt/UiPath.Forms.Activities.Design.resources.dll",
+        "lib/net6.0-windows7.0/pt/UiPath.Forms.Activities.resources.dll",
+        "lib/net6.0-windows7.0/ru/UiPath.Forms.Activities.Design.resources.dll",
+        "lib/net6.0-windows7.0/tr/UiPath.Forms.Activities.Design.resources.dll",
+        "lib/net6.0-windows7.0/tr/UiPath.Forms.Activities.resources.dll",
+        "lib/net6.0-windows7.0/zh-CN/UiPath.Forms.Activities.Design.resources.dll",
+        "lib/net6.0-windows7.0/zh-CN/UiPath.Forms.Activities.resources.dll",
+        "lib/net6.0-windows7.0/zh-TW/UiPath.Forms.Activities.Design.resources.dll",
+        "lib/net6.0-windows7.0/zh-TW/UiPath.Forms.Activities.resources.dll",
+        "lib/net6.0-windows7.0/zu/UiPath.Forms.Activities.Design.resources.dll",
+        "lib/net6.0-windows7.0/zu/UiPath.Forms.Activities.resources.dll",
+        "uipath.form.activities.23.4.3.nupkg.sha512",
+        "uipath.form.activities.nuspec"
+      ]
+    },
     "UiPath.ImageProcessing/23.4.0": {
       "sha512": "riU8a5oAisvhhxciV++7pmsTNWcGtg2AiytNu+ttz7IZiCz9VHS1jlh5uzKvkUlDCgtShuExSZ5eOEVlfjTWwQ==",
       "type": "package",
@@ -20354,6 +20851,75 @@
         "lib/net6.0/zh-CN/UiPath.Platform.resources.dll",
         "uipath.platform.23.4.1.nupkg.sha512",
         "uipath.platform.nuspec"
+      ]
+    },
+    "UiPath.Studio.Forms.Runtime/23.4.3": {
+      "sha512": "IeQ+pQgzGO9XSP5hQsP8AJG4RRnVN7LqwzROSwBME/UR7DLWxKuf8AF93bwxyQzGjFWYLDmqz31oJI1tJg4ZEg==",
+      "type": "package",
+      "path": "uipath.studio.forms.runtime/23.4.3",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "contentFiles/any/any/dist/aggrid/ag-grid-community.min.js",
+        "contentFiles/any/any/dist/aggrid/styles/ag-grid.min.css",
+        "contentFiles/any/any/dist/aggrid/styles/ag-theme-alpine.min.css",
+        "contentFiles/any/any/dist/bootstrap.min.css",
+        "contentFiles/any/any/dist/bootstrap.min.js",
+        "contentFiles/any/any/dist/ckeditor/ckeditor.js",
+        "contentFiles/any/any/dist/flatpickr/flatpickr.min.css",
+        "contentFiles/any/any/dist/flatpickr/flatpickr.min.js",
+        "contentFiles/any/any/dist/fonts/font-awesome.min.css",
+        "contentFiles/any/any/dist/fonts/fontawesome-webfont.woff2",
+        "contentFiles/any/any/dist/formio/formio.full.min.css",
+        "contentFiles/any/any/dist/formio/formio.full.min.js",
+        "contentFiles/any/any/dist/jquery.min.js",
+        "contentFiles/any/any/dist/moment/moment.min.js",
+        "contentFiles/any/any/dist/require.js",
+        "contentFiles/any/any/dist/themes/cosmo/bootstrap.min.css",
+        "contentFiles/any/any/dist/themes/cyborg/bootstrap.min.css",
+        "contentFiles/any/any/dist/themes/flatly/bootstrap.min.css",
+        "contentFiles/any/any/dist/themes/sandstone/bootstrap.min.css",
+        "contentFiles/any/any/src/css/main.css",
+        "contentFiles/any/any/src/css/themes/default.bootstrap.min.css",
+        "contentFiles/any/any/src/css/themes/default.custom.css",
+        "contentFiles/any/any/src/css/themes/override.custom.css",
+        "contentFiles/any/any/src/html/formio.host.html",
+        "contentFiles/any/any/src/ts/FormIoHost.js",
+        "contentFiles/any/any/src/ts/FormIoHost.js.map",
+        "contentFiles/any/any/src/ts/HtmlApi.js",
+        "contentFiles/any/any/src/ts/HtmlApi.js.map",
+        "contentFiles/any/any/src/ts/custom_components/DataTable.js",
+        "contentFiles/any/any/src/ts/custom_components/DataTable.js.map",
+        "contentFiles/any/any/src/ts/custom_components/Label.js",
+        "contentFiles/any/any/src/ts/custom_components/Label.js.map",
+        "contentFiles/any/any/src/ts/generated/UiPathMessaging.js",
+        "contentFiles/any/any/src/ts/generated/UiPathMessaging.js.map",
+        "contentFiles/any/any/src/ts/generated/native/UipathMessagingWebview2.js",
+        "contentFiles/any/any/src/ts/generated/native/UipathMessagingWebview2.js.map",
+        "contentFiles/any/any/src/ts/generated/shared/FormIoConstants.js",
+        "contentFiles/any/any/src/ts/generated/shared/FormIoConstants.js.map",
+        "contentFiles/any/any/src/ts/shared/Constants.js",
+        "contentFiles/any/any/src/ts/shared/Constants.js.map",
+        "contentFiles/any/any/src/ts/themes/FormIoThemes.js",
+        "contentFiles/any/any/src/ts/themes/FormIoThemes.js.map",
+        "contentFiles/any/any/src/ts/util/FormIoUtil.js",
+        "contentFiles/any/any/src/ts/util/FormIoUtil.js.map",
+        "lib/net6.0-windows7.0/UiPath.Studio.Forms.Runtime.dll",
+        "lib/net6.0-windows7.0/de/UiPath.Studio.Forms.Runtime.resources.dll",
+        "lib/net6.0-windows7.0/es-MX/UiPath.Studio.Forms.Runtime.resources.dll",
+        "lib/net6.0-windows7.0/es/UiPath.Studio.Forms.Runtime.resources.dll",
+        "lib/net6.0-windows7.0/fr/UiPath.Studio.Forms.Runtime.resources.dll",
+        "lib/net6.0-windows7.0/ja/UiPath.Studio.Forms.Runtime.resources.dll",
+        "lib/net6.0-windows7.0/ko/UiPath.Studio.Forms.Runtime.resources.dll",
+        "lib/net6.0-windows7.0/pt-BR/UiPath.Studio.Forms.Runtime.resources.dll",
+        "lib/net6.0-windows7.0/pt/UiPath.Studio.Forms.Runtime.resources.dll",
+        "lib/net6.0-windows7.0/ru/UiPath.Studio.Forms.Runtime.resources.dll",
+        "lib/net6.0-windows7.0/tr/UiPath.Studio.Forms.Runtime.resources.dll",
+        "lib/net6.0-windows7.0/zh-CN/UiPath.Studio.Forms.Runtime.resources.dll",
+        "lib/net6.0-windows7.0/zh-TW/UiPath.Studio.Forms.Runtime.resources.dll",
+        "lib/net6.0-windows7.0/zu/UiPath.Studio.Forms.Runtime.resources.dll",
+        "uipath.studio.forms.runtime.23.4.3.nupkg.sha512",
+        "uipath.studio.forms.runtime.nuspec"
       ]
     },
     "UiPath.System.Activities/23.4.2": {
@@ -21252,6 +21818,7 @@
     "": [],
     "net6.0-windows7.0": [
       "UiPath.Excel.Activities >= 2.20.1 <= 2.20.1",
+      "UiPath.Form.Activities >= 23.4.3 <= 23.4.3",
       "UiPath.Mail.Activities >= 1.18.2 <= 1.18.2",
       "UiPath.System.Activities >= 23.4.2 <= 23.4.2",
       "UiPath.Testing.Activities >= 23.4.0 <= 23.4.0",
@@ -21280,6 +21847,11 @@
             "include": "Runtime",
             "target": "Package",
             "version": "[2.20.1, 2.20.1]"
+          },
+          "UiPath.Form.Activities": {
+            "include": "Runtime",
+            "target": "Package",
+            "version": "[23.4.3, 23.4.3]"
           },
           "UiPath.Mail.Activities": {
             "include": "Runtime",
