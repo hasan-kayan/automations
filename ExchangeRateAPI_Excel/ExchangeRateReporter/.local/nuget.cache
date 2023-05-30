@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "A1/m6LpsYJGYSNY+8vBYaE4CKnBQFG9l75k9lhVOxJZtR6ylBLksEBBGw84HApnd9rquyMG7dqDGcoQzuZwhig==",
+  "dgSpecHash": "58dTy3iZiKuxNowNS44K/q3py3x0+04TEVZMxOYLjPUxP3gba3qBs5l4t70UvUt2L6AZywqHvLzQcSvL8p6ahg==",
   "success": true,
   "projectFilePath": "C:\\Users\\hasan\\Desktop\\automations\\ExchangeRateAPI_Excel\\ExchangeRateReporter\\.local\\",
   "expectedPackageFiles": [
     "C:\\Users\\hasan\\.nuget\\packages\\automapper\\9.0.0\\automapper.9.0.0.nupkg.sha512",
+    "C:\\Users\\hasan\\.nuget\\packages\\avalonedit\\6.0.1\\avalonedit.6.0.1.nupkg.sha512",
     "C:\\Users\\hasan\\.nuget\\packages\\azure.core\\1.18.0\\azure.core.1.18.0.nupkg.sha512",
     "C:\\Users\\hasan\\.nuget\\packages\\closedxml\\0.95.4\\closedxml.0.95.4.nupkg.sha512",
     "C:\\Users\\hasan\\.nuget\\packages\\csvhelper\\16.0.0\\csvhelper.16.0.0.nupkg.sha512",
@@ -99,6 +100,7 @@
     "C:\\Users\\hasan\\.nuget\\packages\\npoi\\2.5.5\\npoi.2.5.5.nupkg.sha512",
     "C:\\Users\\hasan\\.nuget\\packages\\polly\\7.1.0\\polly.7.1.0.nupkg.sha512",
     "C:\\Users\\hasan\\.nuget\\packages\\portable.bouncycastle\\1.9.0\\portable.bouncycastle.1.9.0.nupkg.sha512",
+    "C:\\Users\\hasan\\.nuget\\packages\\restsharp\\106.15.0\\restsharp.106.15.0.nupkg.sha512",
     "C:\\Users\\hasan\\.nuget\\packages\\runtime.any.system.collections\\4.3.0\\runtime.any.system.collections.4.3.0.nupkg.sha512",
     "C:\\Users\\hasan\\.nuget\\packages\\runtime.any.system.diagnostics.tools\\4.3.0\\runtime.any.system.diagnostics.tools.4.3.0.nupkg.sha512",
     "C:\\Users\\hasan\\.nuget\\packages\\runtime.any.system.diagnostics.tracing\\4.3.0\\runtime.any.system.diagnostics.tracing.4.3.0.nupkg.sha512",
@@ -282,7 +284,9 @@
     "C:\\Users\\hasan\\.nuget\\packages\\uipath.testing.activities\\23.4.0\\uipath.testing.activities.23.4.0.nupkg.sha512",
     "C:\\Users\\hasan\\.nuget\\packages\\uipath.uiautomation.activities\\23.4.4\\uipath.uiautomation.activities.23.4.4.nupkg.sha512",
     "C:\\Users\\hasan\\.nuget\\packages\\uipath.uiautomation.activities.runtime\\23.4.4\\uipath.uiautomation.activities.runtime.23.4.4.nupkg.sha512",
-    "C:\\Users\\hasan\\.nuget\\packages\\uipath.vision\\3.10.1\\uipath.vision.3.10.1.nupkg.sha512"
+    "C:\\Users\\hasan\\.nuget\\packages\\uipath.vision\\3.10.1\\uipath.vision.3.10.1.nupkg.sha512",
+    "C:\\Users\\hasan\\.nuget\\packages\\uipath.webapi.activities\\1.16.2\\uipath.webapi.activities.1.16.2.nupkg.sha512",
+    "C:\\Users\\hasan\\.nuget\\packages\\uipath.webapi.runtime\\1.16.2\\uipath.webapi.runtime.1.16.2.nupkg.sha512"
   ],
   "logs": []
 }
