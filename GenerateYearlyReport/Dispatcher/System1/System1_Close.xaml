@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="System1_Close" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1006,1129" sap2010:WorkflowViewState.IdRef="System1_Close_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="System1_Close" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1076,1452" sap2010:WorkflowViewState.IdRef="System1_Close_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -80,7 +80,7 @@
       <AssemblyReference>UiPath.System.Activities.ViewModels</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="System1_Close" sap:VirtualizedContainerService.HintSize="1016,1064" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="System1_Close" sap:VirtualizedContainerService.HintSize="1016,1387" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -112,7 +112,7 @@
     </uix:NApplicationCard>
     <uix:NCheckState DisplayName="Check App State 'Login'" sap:VirtualizedContainerService.HintSize="954,424" sap2010:WorkflowViewState.IdRef="NCheckState_1" Version="V3">
       <uix:NCheckState.IfExists>
-        <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="450,207" sap2010:WorkflowViewState.IdRef="Sequence_3">
+        <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="450,205" sap2010:WorkflowViewState.IdRef="Sequence_3">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -135,5 +135,22 @@
         <uix:TargetAnchorable BrowserURL="https://acme-test.uipath.com/login" DesignTimeRectangle="398, 169, 1140, 50" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'Login'" FullSelectorArgument="&lt;webctrl tag='H1' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='H1' type='' class='page-header' aaname='                                                                                                                                                                                     Login                                                         ' check:innerText='Login' /&gt;" Guid="fcf09092-0568-4387-ad44-6e571dca49d2" ImageBase64="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" InformativeScreenshot="c0a75ac212eeac1400dbc18f27d5dbc9.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='ACME System 1 - Log In' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive" />
       </uix:NCheckState.Target>
     </uix:NCheckState>
+    <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Attach Browser 'chrome.exe ACME'" sap:VirtualizedContainerService.HintSize="954,283" sap2010:WorkflowViewState.IdRef="BrowserScope_1" InformativeScreenshot="804c87ad8cda7dc4c9c1de3b317a27d2" Selector="&lt;html app='chrome.exe' title='ACME System 1 - Log In' /&gt;">
+      <ui:BrowserScope.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="450,136" sap2010:WorkflowViewState.IdRef="Sequence_5">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:CloseTab Browser="{x:Null}" DisplayName="Close Tab" sap:VirtualizedContainerService.HintSize="388,25" sap2010:WorkflowViewState.IdRef="CloseTab_1" />
+          </Sequence>
+        </ActivityAction>
+      </ui:BrowserScope.Body>
+    </ui:BrowserScope>
   </Sequence>
 </Activity>
