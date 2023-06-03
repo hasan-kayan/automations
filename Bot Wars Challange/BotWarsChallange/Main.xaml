@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1076,2778" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:njl="clr-namespace:Newtonsoft.Json.Linq;assembly=Newtonsoft.Json" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1076,4248" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:njl="clr-namespace:Newtonsoft.Json.Linq;assembly=Newtonsoft.Json" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -43,6 +43,11 @@
       <x:String>Newtonsoft.Json</x:String>
       <x:String>System.ComponentModel</x:String>
       <x:String>System.Collections.Specialized</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.ExtractData</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -100,9 +105,15 @@
       <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
       <AssemblyReference>System.Collections.Specialized</AssemblyReference>
       <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="546,2713" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="546,4183" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="employeeID" />
       <Variable x:TypeArguments="x:String" Name="requestResponse" />
@@ -209,13 +220,23 @@
     </Assign>
     <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="484,94" sap2010:WorkflowViewState.IdRef="LogMessage_7" Level="Info" Message="[&quot;Employee Phone Number:&quot;+ phoneNumberString]" />
     <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="484,94" sap2010:WorkflowViewState.IdRef="LogMessage_8" Level="Info" Message="[&quot;Employee Start Date:&quot; + startDateString]" />
-    <ui:OpenApplication ApplicationWindow="{x:Null}" Arguments="{x:Null}" TimeoutMS="{x:Null}" WorkingDirectory="{x:Null}" DisplayName="Open Application 'employeelist.exe Employ...'" FileName="C:\Users\hasan\Desktop\employeelist.exe" sap:VirtualizedContainerService.HintSize="484,393" sap2010:WorkflowViewState.IdRef="OpenApplication_1" InformativeScreenshot="b34b9e5f40f2b06a0a3a2f4dd1bec3b2" Selector="&lt;wnd app='employeelist.exe' cls='WindowsForms10.Window.*' title='Employee Database' /&gt;">
+    <ui:OpenApplication ApplicationWindow="{x:Null}" Arguments="{x:Null}" TimeoutMS="{x:Null}" WorkingDirectory="{x:Null}" DisplayName="Open Application 'employeelist.exe Employ...'" FileName="C:\Users\hasan\Desktop\employeelist.exe" sap:VirtualizedContainerService.HintSize="484,1863" sap2010:WorkflowViewState.IdRef="OpenApplication_1" InformativeScreenshot="b34b9e5f40f2b06a0a3a2f4dd1bec3b2" Selector="&lt;wnd app='employeelist.exe' cls='WindowsForms10.Window.*' title='Employee Database' /&gt;">
       <ui:OpenApplication.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="450,246" sap2010:WorkflowViewState.IdRef="Sequence_5">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="450,1716" sap2010:WorkflowViewState.IdRef="Sequence_5">
+            <Sequence.Variables>
+              <Variable x:TypeArguments="x:String" Name="firstName" />
+              <Variable x:TypeArguments="x:String" Name="lastName" />
+              <Variable x:TypeArguments="x:String" Name="EmailID" />
+              <Variable x:TypeArguments="x:String" Name="City" />
+              <Variable x:TypeArguments="x:String" Name="zipCode" />
+              <Variable x:TypeArguments="x:String" Name="jobTitle" />
+              <Variable x:TypeArguments="x:String" Name="department" />
+              <Variable x:TypeArguments="x:String" Name="state" />
+            </Sequence.Variables>
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -233,6 +254,160 @@
                 </ui:Target>
               </ui:TypeInto.Target>
             </ui:TypeInto>
+            <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'WindowsForms10.BUTTON.a...'" sap:VirtualizedContainerService.HintSize="388,107" sap2010:WorkflowViewState.IdRef="Click_1" KeyModifiers="None" MouseButton="BTN_LEFT">
+              <ui:Click.CursorPosition>
+                <ui:CursorPosition Position="Center">
+                  <ui:CursorPosition.OffsetX>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetX>
+                  <ui:CursorPosition.OffsetY>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetY>
+                </ui:CursorPosition>
+              </ui:Click.CursorPosition>
+              <ui:Click.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="3be4460e-50f4-417f-8ee3-3ee07eb48d07" InformativeScreenshot="08a3fb116abd4380447419ec22e249f8" Selector="&lt;wnd cls='WindowsForms10.BUTTON.*' title='Search' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:Click.Target>
+            </ui:Click>
+            <ui:GetFullText IgnoreHidden="{x:Null}" DisplayName="Get Text First Name" sap:VirtualizedContainerService.HintSize="388,107" sap2010:WorkflowViewState.IdRef="GetFullText_1">
+              <ui:GetFullText.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="89d0da18-895d-417e-9ecc-3c07c706fdcd" InformativeScreenshot="786e89fe77d748402efcfc40add1886a" Selector="&lt;wnd cls='WindowsForms10.EDIT.*' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:GetFullText.Target>
+              <ui:GetFullText.Text>
+                <OutArgument x:TypeArguments="x:String">[firstName]</OutArgument>
+              </ui:GetFullText.Text>
+            </ui:GetFullText>
+            <ui:GetFullText IgnoreHidden="{x:Null}" DisplayName="Get Text Last Name" sap:VirtualizedContainerService.HintSize="388,107" sap2010:WorkflowViewState.IdRef="GetFullText_2">
+              <ui:GetFullText.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="6d7af8a8-7238-41c8-b0af-74be20e4bb42" InformativeScreenshot="bd4af4a5f5495880ad7d389190a5d7de" Selector="&lt;wnd cls='WindowsForms10.EDIT.*' idx='2' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:GetFullText.Target>
+              <ui:GetFullText.Text>
+                <OutArgument x:TypeArguments="x:String">[lastName]</OutArgument>
+              </ui:GetFullText.Text>
+            </ui:GetFullText>
+            <ui:GetFullText IgnoreHidden="{x:Null}" DisplayName="Get Full Text Email ID" sap:VirtualizedContainerService.HintSize="388,107" sap2010:WorkflowViewState.IdRef="GetFullText_3">
+              <ui:GetFullText.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="2371157e-b435-4ecb-9926-d63f34378987" InformativeScreenshot="ae6d78754c36b6108c43f251f1266417" Selector="&lt;wnd cls='WindowsForms10.EDIT.*' idx='3' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:GetFullText.Target>
+              <ui:GetFullText.Text>
+                <OutArgument x:TypeArguments="x:String">[EmailID]</OutArgument>
+              </ui:GetFullText.Text>
+            </ui:GetFullText>
+            <ui:GetFullText IgnoreHidden="{x:Null}" DisplayName="Get Full Text  City" sap:VirtualizedContainerService.HintSize="388,107" sap2010:WorkflowViewState.IdRef="GetFullText_4">
+              <ui:GetFullText.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="ae2b4ca9-3329-48ef-ac67-67d06ef1ff60" InformativeScreenshot="cb3c330a683a1439ea974342d545c49c" Selector="&lt;wnd cls='WindowsForms10.EDIT.*' idx='4' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:GetFullText.Target>
+              <ui:GetFullText.Text>
+                <OutArgument x:TypeArguments="x:String">[City]</OutArgument>
+              </ui:GetFullText.Text>
+            </ui:GetFullText>
+            <ui:GetFullText IgnoreHidden="{x:Null}" DisplayName="Get Full Text Zip Code" sap:VirtualizedContainerService.HintSize="388,107" sap2010:WorkflowViewState.IdRef="GetFullText_5">
+              <ui:GetFullText.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="e921195b-a479-45aa-a85b-a0a3b5e15084" InformativeScreenshot="d561f96288d79e04d2a9faedfd25f867" Selector="&lt;wnd cls='WindowsForms10.EDIT.*' idx='5' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:GetFullText.Target>
+              <ui:GetFullText.Text>
+                <OutArgument x:TypeArguments="x:String">[zipCode]</OutArgument>
+              </ui:GetFullText.Text>
+            </ui:GetFullText>
+            <ui:GetFullText IgnoreHidden="{x:Null}" DisplayName="Get Full Text Job Title" sap:VirtualizedContainerService.HintSize="388,107" sap2010:WorkflowViewState.IdRef="GetFullText_6">
+              <ui:GetFullText.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="81b83115-168c-4112-83e8-804a18ab5a1a" InformativeScreenshot="9a5222fa2437264ab5a89586496fb031" Selector="&lt;wnd cls='WindowsForms10.EDIT.*' idx='9' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:GetFullText.Target>
+              <ui:GetFullText.Text>
+                <OutArgument x:TypeArguments="x:String">[jobTitle]</OutArgument>
+              </ui:GetFullText.Text>
+            </ui:GetFullText>
+            <ui:GetFullText IgnoreHidden="{x:Null}" DisplayName="Get Full Text  Department" sap:VirtualizedContainerService.HintSize="388,107" sap2010:WorkflowViewState.IdRef="GetFullText_7">
+              <ui:GetFullText.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="bdcd5eb2-8cf6-4625-a59f-eeb3deacb430" InformativeScreenshot="b99ce3f5ba83306c602e8d6fea414148" Selector="&lt;wnd cls='WindowsForms10.EDIT.*' idx='8' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:GetFullText.Target>
+              <ui:GetFullText.Text>
+                <OutArgument x:TypeArguments="x:String">[department]</OutArgument>
+              </ui:GetFullText.Text>
+            </ui:GetFullText>
+            <ui:GetFullText IgnoreHidden="{x:Null}" Text="{x:Null}" DisplayName="Get Full Text Manager" sap:VirtualizedContainerService.HintSize="388,107" sap2010:WorkflowViewState.IdRef="GetFullText_8">
+              <ui:GetFullText.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="3f758576-602f-4604-a2d7-e4ff23952c0f" InformativeScreenshot="4726413172937464379faddba127b481" Selector="&lt;wnd cls='WindowsForms10.EDIT.*' idx='7' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:GetFullText.Target>
+            </ui:GetFullText>
+            <ui:GetFullText IgnoreHidden="{x:Null}" DisplayName="Get Full Text  State" sap:VirtualizedContainerService.HintSize="388,107" sap2010:WorkflowViewState.IdRef="GetFullText_9">
+              <ui:GetFullText.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="57a411dc-968f-4491-89df-edaf405e656c" InformativeScreenshot="f33d2feebba3de5b574cae207d8d672b" Selector="&lt;wnd cls='WindowsForms10.EDIT.*' idx='6' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:GetFullText.Target>
+              <ui:GetFullText.Text>
+                <OutArgument x:TypeArguments="x:String">[state]</OutArgument>
+              </ui:GetFullText.Text>
+            </ui:GetFullText>
           </Sequence>
         </ActivityAction>
       </ui:OpenApplication.Body>
