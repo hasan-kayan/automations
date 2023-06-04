@@ -16,7 +16,19 @@ namespace ExcelActivities
             Console.WriteLine("3. Read Range");
             Console.WriteLine("4. Write Range");
 
-            int process = int.Parse(Console.ReadLine());
+            string input = Console.ReadLine();
+
+            if (!string.IsNullOrEmpty(input))
+            {
+                int process = int.Parse(input);
+
+                // Rest of your code based on the value of 'process'
+            }
+            else
+            {
+                Console.WriteLine("Invalid input. Please provide a valid process.");
+            }
+
 
             Console.WriteLine("Enter the path to the Excel file:");
             string filePath = Console.ReadLine();
