@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Data;
-using System.IO;
 using Excel = Microsoft.Office.Interop.Excel;
 
 namespace ExcelActivities
@@ -9,196 +8,162 @@ namespace ExcelActivities
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Excel Activities");
-            Console.WriteLine("Select the process:");
-            Console.WriteLine("1. Read Cell");
-            Console.WriteLine("2. Write Cell");
-            Console.WriteLine("3. Read Range");
-            Console.WriteLine("4. Write Range");
-
-            string input = Console.ReadLine();
-
-            if (!string.IsNullOrEmpty(input))
+            try
             {
-                int process = int.Parse(input);
+                Console.WriteLine("Select the process:");
+                Console.WriteLine("1. Read Cell");
+                Console.WriteLine("2. Write Cell");
+                Console.WriteLine("3. Read Range");
+                Console.WriteLine("4. Write Range");
+                Console.Write("Enter your choice: ");
+                int process = int.Parse(Console.ReadLine());
 
-                // Rest of your code based on the value of 'process'
+                Console.Write("Enter the Excel file path: ");
+                string filePath = Console.ReadLine();
+
+                Excel.Application excelApp = new Excel.Application();
+                Excel.Workbook workbook = excelApp.Workbooks.Open(filePath);
+
+                switch (process)
+                {
+                    case 1:
+                        ReadCell(workbook);
+                        break;
+                    case 2:
+                        WriteCell(workbook);
+                        break;
+                    case 3:
+                        ReadRange(workbook);
+                        break;
+                    case 4:
+                        WriteRange(workbook);
+                        break;
+                    default:
+                        Console.WriteLine("Invalid process selection.");
+                        break;
+                }
+
+                workbook.Save();
+                workbook.Close();
+                excelApp.Quit();
+
+                ReleaseComObject(workbook);
+                ReleaseComObject(excelApp);
             }
-            else
+            catch (Exception ex)
             {
-                Console.WriteLine("Invalid input. Please provide a valid process.");
+                Console.WriteLine("An error occurred: " + ex.Message);
             }
-
-
-            Console.WriteLine("Enter the path to the Excel file:");
-            string filePath = Console.ReadLine();
-
-            Excel.Application excelApp = new Excel.Application();
-            Excel.Workbook workbook = excelApp.Workbooks.Open(filePath);
-
-            switch (process)
-            {
-                case 1:
-                    ReadCell(workbook);
-                    break;
-                case 2:
-                    WriteCell(workbook);
-                    break;
-                case 3:
-                    ReadRange(workbook);
-                    break;
-                case 4:
-                    WriteRange(workbook);
-                    break;
-                default:
-                    Console.WriteLine("Invalid process selection.");
-                    break;
-            }
-
-            workbook.Save();
-            workbook.Close();
-            excelApp.Quit();
-
-            ReleaseObject(workbook);
-            ReleaseObject(excelApp);
-
-            Console.WriteLine("Excel activities completed.");
-            Console.ReadLine();
         }
 
         static void ReadCell(Excel.Workbook workbook)
         {
-            Console.WriteLine("Enter the cell address (e.g., A1):");
+            Console.Write("Enter the cell address (e.g., A1): ");
             string cellAddress = Console.ReadLine();
 
-            Excel.Worksheet worksheet = workbook.ActiveSheet;
-            Excel.Range range = worksheet.get_Range(cellAddress);
+            Excel.Worksheet worksheet = (Excel.Worksheet)workbook.ActiveSheet;
+            Excel.Range cell = worksheet.Range[cellAddress];
+            string cellValue = cell.Value?.ToString();
 
-            if (range != null)
-            {
-                string cellValue = range.Value?.ToString();
-                Console.WriteLine($"Cell {cellAddress} value: {cellValue}");
-            }
-            else
-            {
-                Console.WriteLine($"Cell {cellAddress} does not exist.");
-            }
+            Console.WriteLine($"The value of the cell {cellAddress} is: {cellValue}");
         }
 
         static void WriteCell(Excel.Workbook workbook)
         {
-            Console.WriteLine("Enter the cell address (e.g., A1):");
+            Console.Write("Enter the cell address (e.g., A1): ");
             string cellAddress = Console.ReadLine();
 
-            Console.WriteLine("Enter the data to write:");
+            Console.Write("Enter the data to write: ");
             string data = Console.ReadLine();
 
-            Excel.Worksheet worksheet = workbook.ActiveSheet;
-            Excel.Range range = worksheet.get_Range(cellAddress);
+            Excel.Worksheet worksheet = (Excel.Worksheet)workbook.ActiveSheet;
+            Excel.Range cell = worksheet.Range[cellAddress];
+            cell.Value = data;
 
-            if (range != null)
-            {
-                range.Value = data;
-                Console.WriteLine($"Data '{data}' written to cell {cellAddress} successfully.");
-            }
-            else
-            {
-                Console.WriteLine($"Cell {cellAddress} does not exist.");
-            }
+            Console.WriteLine($"Data '{data}' written to cell {cellAddress} successfully.");
         }
 
         static void ReadRange(Excel.Workbook workbook)
         {
-            Console.WriteLine("Enter the range address (e.g., A1:B5):");
+            Console.Write("Enter the range (e.g., A1:B5): ");
             string rangeAddress = Console.ReadLine();
 
-            Excel.Worksheet worksheet = workbook.ActiveSheet;
-            Excel.Range range = worksheet.get_Range(rangeAddress);
+            Excel.Worksheet worksheet = (Excel.Worksheet)workbook.ActiveSheet;
+            Excel.Range range = worksheet.Range[rangeAddress];
+            object[,] values = range.Value as object[,];
 
-            if (range != null)
+            int rowCount = values?.GetLength(0) ?? 0;
+            int colCount = values?.GetLength(1) ?? 0;
+
+            Console.WriteLine("Range values:");
+            for (int row = 1; row <= rowCount; row++)
             {
-                object[,] values = range.Value2 as object[,];
-
-                if (values != null)
+                for (int col = 1; col <= colCount; col++)
                 {
-                    int rows = values.GetLength(0);
-                    int columns = values.GetLength(1);
-
-                    for (int row = 1; row <= rows; row++)
-                    {
-                        for (int column = 1; column <= columns; column++)
-                        {
-                            string cellValue = values[row, column]?.ToString();
-                            Console.Write($"{cellValue}\t");
-                        }
-
-                        Console.WriteLine();
-                    }
+                    string cellValue = values[row, col]?.ToString();
+                    Console.Write($"{cellValue}\t");
                 }
-            }
-            else
-            {
-                Console.WriteLine($"Range {rangeAddress} does not exist.");
+                Console.WriteLine();
             }
         }
 
         static void WriteRange(Excel.Workbook workbook)
         {
-            Console.WriteLine("Enter the range address (e.g., A1:B5):");
+            Console.Write("Enter the range (e.g., A1:B5): ");
             string rangeAddress = Console.ReadLine();
 
-            Console.WriteLine("Enter the data table (comma-separated values):");
-            string data = Console.ReadLine();
-
+            Console.WriteLine("Enter the data table:");
             DataTable dataTable = new DataTable();
 
-            foreach (string columnName in data.Split(','))
+            Console.Write("Enter the number of columns: ");
+            int colCount = int.Parse(Console.ReadLine());
+
+            Console.WriteLine("Enter column names:");
+            for (int col = 0; col < colCount; col++)
             {
+                Console.Write($"Column {col + 1}: ");
+                string columnName = Console.ReadLine();
                 dataTable.Columns.Add(columnName);
             }
 
-            Console.WriteLine("Enter the rows of data (comma-separated values). Type 'done' when finished:");
+            Console.Write("Enter the number of rows: ");
+            int rowCount = int.Parse(Console.ReadLine());
 
-            while (true)
+            Console.WriteLine("Enter the data:");
+
+            for (int row = 0; row < rowCount; row++)
             {
-                string rowData = Console.ReadLine();
-
-                if (rowData.Equals("done", StringComparison.OrdinalIgnoreCase))
+                DataRow dataRow = dataTable.NewRow();
+                for (int col = 0; col < colCount; col++)
                 {
-                    break;
+                    Console.Write($"Enter the value for cell [{row + 1},{col + 1}]: ");
+                    string cellValue = Console.ReadLine();
+                    dataRow[col] = cellValue;
                 }
-
-                DataRow row = dataTable.NewRow();
-                row.ItemArray = rowData.Split(',');
-
-                dataTable.Rows.Add(row);
+                dataTable.Rows.Add(dataRow);
             }
 
-            Excel.Worksheet worksheet = workbook.ActiveSheet;
-            Excel.Range range = worksheet.get_Range(rangeAddress);
+            Excel.Worksheet worksheet = (Excel.Worksheet)workbook.ActiveSheet;
+            Excel.Range range = worksheet.Range[rangeAddress];
+            range.Value = dataTable;
 
-            if (range != null)
-            {
-                range.Value = dataTable;
-                Console.WriteLine($"Data table written to range {rangeAddress} successfully.");
-            }
-            else
-            {
-                Console.WriteLine($"Range {rangeAddress} does not exist.");
-            }
+            Console.WriteLine("Data written to the range successfully.");
         }
 
-        static void ReleaseObject(object obj)
+        static void ReleaseComObject(object obj)
         {
             try
             {
-                System.Runtime.InteropServices.Marshal.ReleaseComObject(obj);
-                obj = null;
+                if (obj != null)
+                {
+                    System.Runtime.InteropServices.Marshal.ReleaseComObject(obj);
+                    obj = null;
+                }
             }
             catch (Exception ex)
             {
                 obj = null;
-                Console.WriteLine("Exception occurred while releasing object: " + ex.ToString());
+                Console.WriteLine("Exception occurred while releasing COM object: " + ex.Message);
             }
             finally
             {
