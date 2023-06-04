@@ -1,0 +1,11 @@
+Excel Activity
+I want to write a C# code that will make some excel activities
+- First ask user for which process user wants and which excel file user wants to work on, take also path to and open that excel file
+Process 1 Read Cell 
+Process 2 Write Cell
+Process 3 Read Range
+Process 4 Write Range
+- If user wants to make a write activity 
+Take data to write if its just a write cell take single data and cell info and write it to excel as required
+- If user wants to write range 
+Take data table and range and write it to excel as required
