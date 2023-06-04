@@ -1,0 +1,35 @@
+{
+  "Workflows": [
+    {
+      "Path": null,
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": null,
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Main.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "state&Sequence_5",
+        "department&Sequence_5",
+        "jobTitle&Sequence_5",
+        "zipCode&Sequence_5",
+        "City&Sequence_5",
+        "EmailID&Sequence_5",
+        "lastName&Sequence_5",
+        "firstName&Sequence_5",
+        "startDateString&Sequence_1",
+        "phoneNumberString&Sequence_1",
+        "DesObject&Sequence_1",
+        "responseStatus&Sequence_1",
+        "requestResponse&Sequence_1",
+        "employeeID&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    }
+  ]
+}
