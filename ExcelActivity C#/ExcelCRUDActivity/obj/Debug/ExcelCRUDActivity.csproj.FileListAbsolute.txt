@@ -8,3 +8,5 @@ C:\Users\hasan\Desktop\Clone Own Repo\ExcelActivity C#\ExcelCRUDActivity\obj\Deb
 C:\Users\hasan\Desktop\Clone Own Repo\ExcelActivity C#\ExcelCRUDActivity\obj\Debug\ExcelCRUDActivity.csproj.CoreCompileInputs.cache
 C:\Users\hasan\Desktop\Clone Own Repo\ExcelActivity C#\ExcelCRUDActivity\obj\Debug\ExcelCRUDActivity.exe
 C:\Users\hasan\Desktop\Clone Own Repo\ExcelActivity C#\ExcelCRUDActivity\obj\Debug\ExcelCRUDActivity.pdb
+C:\Users\hasan\Desktop\Clone Own Repo\ExcelActivity C#\ExcelCRUDActivity\obj\Debug\ExcelCRUDActivity.csproj.ResolveComReference.cache
+C:\Users\hasan\Desktop\Clone Own Repo\ExcelActivity C#\ExcelCRUDActivity\obj\Debug\ExcelCRUDActivity.Form1.resources

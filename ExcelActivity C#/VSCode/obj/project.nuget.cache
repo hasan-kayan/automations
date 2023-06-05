@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "i0gTCIHDhWAIm75QH8ZdGMew7EhgKxksUmlsZax98a9tJDd1ktszj2NJst7VZXJQeOJyRCj16ejCL1dxMoKdBg==",
+  "dgSpecHash": "i7nGUEN+r27uIkJJ1gOAYcVtcgspP+bKqFAqLwD9Js0RXBk+aNAbA6VfmelbUm/v+gWBglyICdf6fxHHIqityg==",
   "success": true,
   "projectFilePath": "C:\\Users\\hasan\\Desktop\\Clone Own Repo\\ExcelActivity C#\\VSCode\\VSCode.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\hasan\\.nuget\\packages\\microsoft.office.interop.excel\\15.0.4795.1001\\microsoft.office.interop.excel.15.0.4795.1001.nupkg.sha512"
+  ],
   "logs": []
 }
