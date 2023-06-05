@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "og3kwmQVXpQscjcZckG354FeXuinJYx7kswG2f0yPtfYQ+OBja5LyNTfFpAxXnOuSuAj0Yy56T/6RUHfRsu6Zw==",
+  "dgSpecHash": "7DXTOEAjDfHxdJMKjpPO5sWgg52chpCf4Mz2Pp8CXhvFT0kiicgL+EYmXjcTje28ivmAwRq3lWA5pbURFcocyw==",
   "success": true,
   "projectFilePath": "C:\\Users\\hasan\\Desktop\\Clone Own Repo\\ExcelActivity C#\\ExcelApplications\\ExcelApplications.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\hasan\\.nuget\\packages\\microsoft.office.interop.excel\\15.0.4795.1001\\microsoft.office.interop.excel.15.0.4795.1001.nupkg.sha512"
+  ],
   "logs": []
 }
